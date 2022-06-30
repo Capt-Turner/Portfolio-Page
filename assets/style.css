@@ -1,0 +1,29 @@
+/* My plan is to have a fixed navbar at the top of the page so at any time a user can quickly nav between my About/info, work samples, and contact information */
+
+body {
+    display:flex;
+}
+
+nav {
+    display:inline-flex;
+    flex:1 1 0;
+    justify-content:center;
+    background-color:skyblue;
+    border-style:solid;
+    margin:0px 250px;
+}
+
+nav figure {
+}
+
+nav h1 {
+    font-family:Garamond, Times, serif;
+    font-weight:bold;
+    font-size:xx-large;
+    padding:0 15px;
+}
+
+nav h1:hover {
+    text-decoration:underline;
+    cursor:pointer;
+}
