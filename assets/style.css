@@ -1,9 +1,13 @@
 :root {
     --htext: Garamond, Times, serif;
     /* For headers */
+    --txtshad:3px 1px 2px black;
+}
+html {
+    
 }
 body {
-    height:5000px;
+    height:100%;
     background:linear-gradient( #0e0d0f,#fd3223);
 }
 nav {
@@ -16,25 +20,25 @@ nav {
     background-color:darkred;
     border-style:solid;
     border-color:black;
+
 }
 nav figure {
     display:inline;
 }
 nav a {
-    flex: 1 1 0;
+    flex: 1 1 200px;
     display:inline;
     font-family:var(--htext);
     font-weight:bold;
     font-size:200%;
     justify-content:center;
     color:white;
-    scroll-behavior:smooth;
     margin:20px 0px;
 }
 nav a:hover {
     text-decoration:underline;
     cursor:pointer;
-    text-shadow:3px 1px 2px black;
+    text-shadow:var(--txtshad);
 }
 nav a:focus {
     color:gold;
@@ -57,6 +61,7 @@ main h2 {
 }
 main h2:hover{
     color:gold;
+    text-shadow:5px 5px 2px black;
 }
 main p {
     font-family:'Times New Roman', Times, serif;
@@ -73,17 +78,32 @@ main p {
     width:50%;
 }
 #Projects {
+    display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content:center;
 }
+
 #Projects h2 {
     text-align:center;
 }
-#firstH {
-    flex:2 1 100%;
-    position:relative;
-    justify-content:center;
-    outline:2px solid black;
+.card {
+    flex: 1 0 200px;
+    padding: 10px;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+}
+#Projects h3 {
+    padding: 20px;
+    color: white;
+    text-align:center;
+    font-size:125%;
+    margin-top:-50px;
+    margin-bottom:-25px;
+}
+.first {
+    flex: 2 1 200px;
 }
 #Contact {
     align-content:center;
@@ -101,6 +121,7 @@ main p {
 }
 #Contact a:hover {
     color:gold;
+    text-shadow:var(--txtshad);
 }
 @media screen and (max-width: 980px) {
     nav{
@@ -109,7 +130,6 @@ main p {
     nav a{
         display:block;
     }
-    
     #AboutMe h2{
         text-align:center;
     }
@@ -119,9 +139,10 @@ main p {
 }
 @media screen and (max-width: 640px) {
     main{
-        
+        margin:250px 0 0 0;
     }
     nav{
+        height:25%;
         flex-direction:column;
         left:50px;
     }
