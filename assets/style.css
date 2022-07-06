@@ -2,11 +2,14 @@
     --htext: Garamond, Times, serif;
     /* For headers */
 }
-
+body {
+    height:5000px;
+    background:linear-gradient( #0e0d0f,#fd3223);
+}
 nav {
     display:flex;
     position:fixed;
-    top:0;
+    top:-5px;
     left:150px;
     width:75%;
     justify-content:center;
@@ -14,11 +17,9 @@ nav {
     border-style:solid;
     border-color:black;
 }
-
 nav figure {
     display:inline;
 }
-
 nav a {
     flex: 1 1 0;
     display:inline;
@@ -28,54 +29,103 @@ nav a {
     justify-content:center;
     color:white;
     scroll-behavior:smooth;
+    margin:20px 0px;
 }
-
 nav a:hover {
     text-decoration:underline;
     cursor:pointer;
     text-shadow:3px 1px 2px black;
 }
-
 nav a:focus {
     color:gold;
 }
-
 main {
     display:flex;
     justify-content:center;
     flex-direction:column;
     margin:100px 20px;
     padding:5px;
+    color:white;
 }
 main h2 {
+    border:gold 2px;
+    border-style:none outset outset outset;
+    padding:0 15px 0 15px;
     flex: 1 1 100%;
     font-family:var(--htext);
     font-size:250%;
 }
-
+main h2:hover{
+    color:gold;
+}
+main p {
+    font-family:'Times New Roman', Times, serif;
+    font-size:100%;
+}
 #AboutMe {
     
 }
-
+#AboutMe h2 {
+    text-align:left;
+}
+#Mugshot {
+    margin:auto;
+    width:50%;
+}
 #Projects {
     flex-direction: row;
     flex-wrap: wrap;
 }
-
+#Projects h2 {
+    text-align:center;
+}
 #firstH {
     flex:2 1 100%;
     position:relative;
     justify-content:center;
     outline:2px solid black;
 }
-
 #Contact {
-
+    align-content:center;
+}
+#Contact p {
+    display:inline;
+}
+#Contact h2 {
+    text-align:right;
+}
+#Contact a {
+    justify-content:right;
+    color:bisque;
+    margin:0px 10px;
+}
+#Contact a:hover {
+    color:gold;
 }
 @media screen and (max-width: 980px) {
-
+    nav{
+        left:100px;
+    }
+    nav a{
+        display:block;
+    }
+    
+    #AboutMe h2{
+        text-align:center;
+    }
+    #Contact h2{
+        text-align:center;
+    }
 }
-
 @media screen and (max-width: 640px) {
-
+    main{
+        
+    }
+    nav{
+        flex-direction:column;
+        left:50px;
+    }
+    nav figure{
+        display:none;
+    }
 }
