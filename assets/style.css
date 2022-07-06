@@ -1,48 +1,77 @@
-/* My plan is to have a fixed navbar at the top of the page so at any time a user can quickly nav between my About/info, work samples, and contact information */
+:root {
+    --htext: Garamond, Times, serif;
+    /* For headers */
+}
 
 nav {
     display:flex;
+    position:fixed;
+    top:0;
+    left:150px;
+    width:75%;
     justify-content:center;
     background-color:darkred;
     border-style:solid;
     border-color:black;
-    margin:0px 250px;
 }
 
 nav figure {
     display:inline;
 }
 
-nav h1 {
+nav a {
     flex: 1 1 0;
     display:inline;
-    font-family:Garamond, Times, serif;
+    font-family:var(--htext);
     font-weight:bold;
-    font-size:xx-large;
-    justify-content:space-between;
+    font-size:200%;
+    justify-content:center;
     color:white;
-
+    scroll-behavior:smooth;
 }
 
-nav h1:hover {
+nav a:hover {
     text-decoration:underline;
     cursor:pointer;
-    text-shadow:5px 2px 2px black;
+    text-shadow:3px 1px 2px black;
 }
 
-nav h1:focus {
+nav a:focus {
     color:gold;
 }
 
 main {
-    margin:15px 10px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    margin:100px 20px;
     padding:5px;
 }
+main h2 {
+    flex: 1 1 100%;
+    font-family:var(--htext);
+    font-size:250%;
+}
 
-.AboutMe {
+#AboutMe {
     
 }
 
+#Projects {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#firstH {
+    flex:2 1 100%;
+    position:relative;
+    justify-content:center;
+    outline:2px solid black;
+}
+
+#Contact {
+
+}
 @media screen and (max-width: 980px) {
 
 }
